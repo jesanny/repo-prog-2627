@@ -18,9 +18,9 @@ public class Circulo (){
        this.centro = centro;
     }
     public Circulo (double radio){
-
+    this.radio = radio;
+    this.centro= new Punto(0,0);
     }
-    
 
     public double getRadio() {
         return radio;
@@ -29,26 +29,19 @@ public class Circulo (){
     public Punto getCentro(){
         return centro;
     }
-    
-        
 
     public void setRadio(int nuevoRadio)
     {
         radio = nuevoRadio;
     }
 
-    public double calcularArea()
-    {
-
+    public double calcularArea() {
         return 2 * PI * radio * radio;
     }
-    
-
-    public double calcularPerimetro()
-    {
-
+    public double calcularPerimetro() {
         return 2 * PI * radio;
     }
+
     public void setCentroX (int){
 
     }
