@@ -4,57 +4,59 @@ package es.iesteis.prog.ud4;
  * La clase representa círculos con un centro
  * y un valor determinado de radio
  * 
- * @author 
- * @version 
+ * @author a26jesannysbs
+ *
  */
-public class Circulo
-{
+public class Circulo (){
     private final double PI = 3.14;
     private double radio;
+    private Punto centro;
 
-     /**
-     * constructor para los objetos de la clase Circulo
-     * 
-     */
-    public Circulo()
-    {
-       
+
+    public Circulo(Punto centro, double radio) {
+       this.radio = radio;
+       this.centro = centro;
+    }
+    public Circulo (double radio){
+
     }
     
-   
-    /**
-     * 
-     * @return devuelve el radio del círculo
-     */
-    public double getRadio()
-    {
+
+    public double getRadio() {
         return radio;
+    }
+
+    public Punto getCentro(){
+        return centro;
     }
     
         
-      /**
-     * 
-     * @param nuevoRadio el nuevo valor del radio
-     */
+
     public void setRadio(int nuevoRadio)
     {
         radio = nuevoRadio;
     }
-    
-    /**
-     * @return devuelve el área del círculo
-     */
+
     public double calcularArea()
     {
+
         return 2 * PI * radio * radio;
     }
     
-    /**
-     * @return devuelve el perímetro del círculo
-     */
+
     public double calcularPerimetro()
     {
+
         return 2 * PI * radio;
+    }
+    public void setCentroX (int){
+
+    }
+    public void setCentroY (int){
+
+    }
+    public String toString(){
+
     }
     
  
