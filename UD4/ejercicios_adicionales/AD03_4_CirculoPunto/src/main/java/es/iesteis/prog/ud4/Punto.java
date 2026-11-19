@@ -50,8 +50,17 @@ public class Punto {
 
     static void main(String[] args) {
 
-
         //Podéis hacer las pruebas de esta clase aquí, creando una instancia de Punto.
+    }
+    public double getDistanciaDesdeOrigen(){
+
+    return Math.sqrt(Math.pow(x, 2)  + Math.pow(y, 2));
+
+    }
+
+    public double getDistanciaDesde(Punto p){
+
+    return Math.sqrt(Math.pow(this.x - p.x, 2)+ Math.pow(this.y - p.y, 2));
     }
 
 }
