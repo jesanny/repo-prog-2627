@@ -7,7 +7,7 @@ package es.iesteis.prog.ud4;
  * @author a26jesannysbs
  *
  */
-public class Circulo() {
+public class Circulo{
     private final double PI = 3.14;
     private double radio;
     private Punto centro;
@@ -53,10 +53,12 @@ public class Circulo() {
 
     public String toString() {
 
+        return "Radio: " + radio + ", centro: " + centro;
     }
 
-    public String printCirculo() {
-        System.out.println();
+    public void printCirculo() {
+
+        System.out.println("Circulo se representa: " + this.toString());
     }
 }
 
