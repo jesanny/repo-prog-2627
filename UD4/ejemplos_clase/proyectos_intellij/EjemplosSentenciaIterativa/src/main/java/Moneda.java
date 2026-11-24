@@ -3,8 +3,7 @@
  *  
  * Clase que representa a una moneda con una cara
  */
-public class Moneda
-{
+public class Moneda {
      
     private boolean cara;
 
@@ -13,7 +12,8 @@ public class Moneda
      */
     public Moneda()
     {
-         cara = true;
+
+        cara = true;
     }
 
     /**
@@ -24,7 +24,8 @@ public class Moneda
      */
     public void tirar()
     {
-         cara = ( (int) (Math.random() * 2) == 0);
+
+        cara = ( (int) (Math.random() * 2) == 0);
     }
     
     /**
@@ -32,6 +33,7 @@ public class Moneda
      */
     public  boolean esCara()
     {
+
         return cara;
     }
 

@@ -33,8 +33,14 @@ public class DemoWhileUno
      *  
      * 
      */
-    public void ejemplo01()
-    {
+    public void ejemplo01() {
+        int contadorSaludos = 0;
+        while (contadorSaludos < 10){
+            contadorSaludos++;
+            System.out.println("Hola " + contadorSaludos);
+
+
+        }
 
     }
 
@@ -43,8 +49,13 @@ public class DemoWhileUno
      * Tirar una moneda 10 veces
      * 
      */
-    public void ejemplo02()
-    {
+    public void ejemplo02() {
+        int tirarMoneda = 0;
+        while (tirarMoneda < 10){
+            tirarMoneda++;
+            System.out.println("la moneda es: " + tirarMoneda);
+            System.out.printf("Ha salido cara? %b%n",  moneda.esCara());
+        }
 
     }
 
@@ -54,8 +65,21 @@ public class DemoWhileUno
      * contando las veces que ha salido cara y las que ha salido cruz
      * Uso de contadores
      */
-    public void ejemplo03()
-    {
+    public void ejemplo03() {
+        int tirarMoneda = 0, cara = 0, cruz = 0;
+
+        while (tirarMoneda < 30) {
+            tirarMoneda++;
+            moneda.tirar();
+            if (moneda.esCara())
+                cara++;
+            else
+                cruz++;
+
+        }
+        //System.out.printf("se ha tirado: " + tirarMoneda + " monedas, son cara: " + cara + ", son cruces: " + cruz);
+        System.out.printf("Han salido %d caras y %d cruces ", cara, cruz);
+
 
     }
 
@@ -328,6 +352,11 @@ public class DemoWhileUno
     }
 
     static void main(String[] args) {
+        DemoWhileUno miDemo = new DemoWhileUno();
+        miDemo.ejemplo03();
+
+        //DemoWhileUno miOtroDemo = new DemoWhileUno();
+        //miOtroDemo.ejemplo02();
         //TODO añadir aqui el codigo de pruebas: crear instancia y llamar a las funciones
     }
 
