@@ -88,9 +88,21 @@ public class DemoWhileUno
      * Suma y producto de los números naturales desde el 20 hasta el 1
      * Uso de acumuladores
      */
-    public void ejemplo04()
-    {
+    public void ejemplo04() {
 
+
+        int suma = 0;
+        int contador= 20;
+        int producto = 1;
+
+        while (suma <= 20){
+            contador++;
+            producto += 1;
+            suma += 1;
+
+            System.out.printf("La suma es;  " +  suma);
+            System.out.println("El producto:  " + producto);
+        }
     }
 
     /**
@@ -100,18 +112,48 @@ public class DemoWhileUno
      *  
      *  Bucle controlado por un valor centinela
      */
-    public void ejemplo05( )
-    {
+    public void ejemplo05( ) {
 
-    }
+        int columna = 0;
+        int numero = (int) (Math.random() * 41) + 10;
+
+        while (numero != 25) {
+            System.out.printf("%4d", numero);
+            columna++;
+
+            if (columna == 6) {
+                System.out.println();
+                columna = 0;
+            }
+
+            numero = (int) (Math.random() * 41) + 10;
+        }
+
+        System.out.printf("%4d", numero);
+        System.out.println();
+
+        }
+
+
+
 
     /**
      *  Generar aleatorios entre 0 y 50 inclusive y sumarlos.
      *  Parar cuando salga el 0. Escribir al final la suma
      *  Bucle controlado por un valor centinela
      */
-    public void ejemplo06( )
-    {
+    public void ejemplo06( ) {
+        int suma = 0;
+        int numero = (int) (Math.random() * 51);
+        while (numero != 0){
+            suma += numero;
+
+            numero = (int) (Math.random() * 51);
+            System.out.printf("Generado %d\n", numero);
+
+        }
+        IO.println(String.format("la suma es %d", suma));
+
 
     }
 
@@ -353,7 +395,7 @@ public class DemoWhileUno
 
     static void main(String[] args) {
         DemoWhileUno miDemo = new DemoWhileUno();
-        miDemo.ejemplo03();
+        miDemo.ejemplo06();
 
         //DemoWhileUno miOtroDemo = new DemoWhileUno();
         //miOtroDemo.ejemplo02();
