@@ -164,8 +164,14 @@ public class DemoWhileUno
      * Usar una variable booleana como conmutador (o switch - flag) para
      * salir del bucle
      */
-    public void ejemplo07()
-    {
+    public void ejemplo07() {
+    int tirarMoneda =0, cara = 0, cruz = 0;
+
+    while (tirarMoneda <= 30){
+        moneda.tirar();
+        tirarMoneda++;
+    }
+        System.out.printf("monedas tiradas: " + tirarMoneda);
 
     }
 
@@ -174,10 +180,26 @@ public class DemoWhileUno
      *  y producto de impares entre 1 y 100 
      *   
      */
-    public  void ejemplo08()
-    {
+        public  void ejemplo08() {
+        int sumarPares = 0;
+        int impar = 1;
+        boolean tocaImpar = true;
+        int contador = 1;
 
-    }
+        while (contador <= 100){
+
+            if (tocaImpar){
+                impar *= contador;
+                tocaImpar = false;
+            }
+            else {
+                    sumarPares += contador;
+                    tocaImpar = true;
+                }
+                contador++;
+            }
+
+        }
 
     /**
      *  Suma de pares entre 1 y 100
@@ -395,7 +417,7 @@ public class DemoWhileUno
 
     static void main(String[] args) {
         DemoWhileUno miDemo = new DemoWhileUno();
-        miDemo.ejemplo06();
+        miDemo.ejemplo07();
 
         //DemoWhileUno miOtroDemo = new DemoWhileUno();
         //miOtroDemo.ejemplo02();
